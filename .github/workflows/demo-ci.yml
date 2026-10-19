@@ -15,6 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run smoke test
-        run: |
-          echo "smoke-test: build is healthy"
-          echo "smoke-test: all checks passed"
+        run: echo "smoke-test: build is healthy"
