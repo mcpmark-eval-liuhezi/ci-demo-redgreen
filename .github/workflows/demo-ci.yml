@@ -1,0 +1,20 @@
+name: Demo CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run lint
+        run: echo "lint: no problems found"
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberately broken step
+        run: |
+          echo "smoke-test: simulating a broken build..."
+          exit 1
